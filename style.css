@@ -22,8 +22,9 @@ body {
 /* LAYOUT */
 header {
   position: relative;
-  height: 35vh;
+  min-height: 35vh;
   border-bottom: 7px solid #eee;
+  padding: 2rem;
 }
 
 main {
@@ -62,7 +63,6 @@ h1 {
   transform: translate(-50%, -50%);
 
 }
-
 
 .number {
   background: #eee;
@@ -135,14 +135,24 @@ h1 {
   h1 {
     font-size: 3rem;
     width: 90%;
+
   }
 }
 
 @media (max-width: 479.98px) {
   main {
+    min-height: auto;
     flex-direction: column;
-    gap: 4rem;
-    padding: 2;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-height: 25vh;
   }
 
   .again,
@@ -150,13 +160,6 @@ h1 {
     position: static;
   }
 
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding-top: 2rem;
-  }
 
   .left,
   .right {
@@ -166,6 +169,7 @@ h1 {
 
   h1 {
     font-size: 2rem;
+    top: 60%;
   }
 
   .guess {
@@ -174,6 +178,7 @@ h1 {
   }
 
   .number {
+
     width: 12rem;
     font-size: 4rem;
     padding: 2rem 0;
@@ -181,6 +186,11 @@ h1 {
 
   .right {
     text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
   }
 
   .message {
